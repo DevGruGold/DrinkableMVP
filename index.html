@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drinkable - Water Quality Map</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1><i class="fas fa-tint"></i> Drinkable</h1>
+            <p>Central America Water Quality Map</p>
+        </header>
+        
+        <div id="loading" class="loading-overlay">
+            <div class="spinner"></div>
+            <p>Loading water quality data...</p>
+        </div>
+
+        <main>
+            <div id="map"></div>
+            <div id="legend">
+                <h3>Water Quality Index</h3>
+                <div class="legend-gradient"></div>
+                <div class="legend-labels">
+                    <span>Poor</span>
+                    <span>Excellent</span>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Last updated: <span id="lastUpdate">Loading...</span></p>
+        </footer>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/heatmapjs@2.0.2/heatmap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/heatmapjs@2.0.2/plugins/leaflet-heatmap.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
